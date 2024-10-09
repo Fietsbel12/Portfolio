@@ -16,6 +16,7 @@
             </nav>
         </div>
     </header>
+    
     <main>
         <!--Filter knoppen-->
         <div class="filter-buttons">
@@ -26,11 +27,50 @@
             <button onclick="filterSelection('illustrations')">Illustrations</button>
             <button onclick="filterSelection('handcrafted')">Handcrafted</button>
         </div>
-        <!--Weergaven van mij gemaakte zooi-->
-        <div class="gallery">
-
+        <!--Weergaven van mijn persoonlijke projecten-->
+        <div class="gallery"> <!--hoofd class in deze class komt voor elke filter een aparte class-->
+            <!--Logo's-->
+            <div class="gallery-item logo">
+                <img src="img/placeholder.jpg" alt="placeholder" width="50px">
+            </div>
+            <!--Print werk-->
+            <div class="gallery-item print">
+                <img src="img/placeholder2.jpg" alt="placeholder" width="50px">
+            </div>
+            <!--Product design-->
+            <div class="gallery-item product">
+                <img src="img/placeholder3.jpg" alt="placeholder" width="50px">
+            </div>
+            <!--Illustraties-->
+            <div class="gallery-item illustrations">
+                <img src="img/placeholder4.jpg" alt="placeholder" width="50px">
+            </div>
+            <!--Handgemaakt werk-->
+            <div class="gallery-item handcrafted">
+                <img src="img/placeholder5.jpg" alt="placeholder" width="50px">
+            </div>
         </div>
+
+        <script>
+            // Dit zorgt er voor dat het filteren werkt :D
+            function filterSelection(category){
+                var items = document.getElementsByClassName("gallery-item");
+                if (category === "all"){
+                    category = "";
+                }
+                for (var i = 0; i < items.length; i++){
+                    items[i].style.display = "none";
+                    if (items[i].className.indexOf(category) > -1){
+                        items[i].style.display = "block";
+                    }
+                }
+            }
+
+            // toont standaard alle items
+            filterSelection('all');
+        </script>
     </main>
+
     <footer>
         <p>&copy; <script>document.write(new Date().getFullYear());</script> design.bylotus. All rights reserved.</p>
     </footer>
