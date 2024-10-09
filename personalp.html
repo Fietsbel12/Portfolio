@@ -1,78 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotus Koning</title>
-</head>
-<body>
-    <header>
-        <div class="wrapper">          
-            <nav>
-                <a href="index.html">Me</a>
-                <a href="personalp.html">Personal projects</a>
-                <a href="schoolp.html">School projects</a>
-                <a href="contact.html">contact</a>
-            </nav>
-        </div>
-    </header>
-    
-    <main>
-        <!--Filter knoppen-->
-        <div class="filter-buttons">
-            <button onclick="filterSelection('all')">All</button>
-            <button onclick="filterSelection('logo')">Logo design</button>
-            <button onclick="filterSelection('print')">Print design</button>
-            <button onclick="filterSelection('product')">Product design</button>
-            <button onclick="filterSelection('illustrations')">Illustrations</button>
-            <button onclick="filterSelection('handcrafted')">Handcrafted</button>
-        </div>
-        <!--Weergaven van mijn persoonlijke projecten-->
-        <div class="gallery"> <!--hoofd class in deze class komt voor elke filter een aparte class-->
-            <!--Logo's-->
-            <div class="gallery-item logo">
-                <img src="img/placeholder.jpg" alt="placeholder" width="50px">
-            </div>
-            <!--Print werk-->
-            <div class="gallery-item print">
-                <img src="img/placeholder2.jpg" alt="placeholder" width="50px">
-            </div>
-            <!--Product design-->
-            <div class="gallery-item product">
-                <img src="img/placeholder3.jpg" alt="placeholder" width="50px">
-            </div>
-            <!--Illustraties-->
-            <div class="gallery-item illustrations">
-                <img src="img/placeholder4.jpg" alt="placeholder" width="50px">
-            </div>
-            <!--Handgemaakt werk-->
-            <div class="gallery-item handcrafted">
-                <img src="img/placeholder5.jpg" alt="placeholder" width="50px">
-            </div>
-        </div>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="css/style.css" type="text/css">
+        <title>Lotus Koning</title>
+    </head>
 
-        <script>
-            // Dit zorgt er voor dat het filteren werkt :D
-            function filterSelection(category){
-                var items = document.getElementsByClassName("gallery-item");
-                if (category === "all"){
-                    category = "";
+    <body>
+        <header>
+            <div class="wrapper">
+                <!--Hamburger menu-->
+                <div class="nav-menu" onclick="toggleMenu()">
+                    <div class="bar1"></div>
+                    <div class="bar2"></div>
+                    <div class="bar3"></div>
+                </div>
+
+                <nav>
+                    <a href="index.html">Me</a>
+                    <a href="personalp.html">Personal projects</a>
+                    <a href="schoolp.html">School projects</a>
+                    <a href="contact.html">contact</a>
+                </nav>
+            </div>
+            <script>
+                function toggleMenu(){
+                    var nav = document.querySelector("nav");
+                    nav.classList.toggle("show");
                 }
-                for (var i = 0; i < items.length; i++){
-                    items[i].style.display = "none";
-                    if (items[i].className.indexOf(category) > -1){
-                        items[i].style.display = "block";
+            </script>
+        </header>
+        
+        <main>
+            <div class="wrapper">
+                <!--Filter knoppen-->
+                <div class="filter-buttons">
+                    <button onclick="filterSelection('all')">All</button>
+                    <button onclick="filterSelection('logo')">Logo design</button>
+                    <button onclick="filterSelection('print')">Print design</button>
+                    <button onclick="filterSelection('product')">Product design</button>
+                    <button onclick="filterSelection('illustrations')">Illustrations</button>
+                    <button onclick="filterSelection('handcrafted')">Handcrafted</button>
+                </div>
+                <!--Weergaven van mijn persoonlijke projecten-->
+                <div class="gallery"> <!--hoofd class in deze class komt voor elke filter een aparte class-->
+                    <!--Logo's-->
+                    <div class="gallery-item logo">
+                        <img src="img/placeholder.jpg" alt="placeholder" width="50px">
+                    </div>
+                    <!--Print werk-->
+                    <div class="gallery-item print">
+                        <img src="img/placeholder2.jpg" alt="placeholder" width="50px">
+                    </div>
+                    <!--Product design-->
+                    <div class="gallery-item product">
+                        <img src="img/placeholder3.jpg" alt="placeholder" width="50px">
+                    </div>
+                    <!--Illustraties-->
+                    <div class="gallery-item illustrations">
+                        <img src="img/placeholder4.jpg" alt="placeholder" width="50px">
+                    </div>
+                    <!--Handgemaakt werk-->
+                    <div class="gallery-item handcrafted">
+                        <img src="img/placeholder5.jpg" alt="placeholder" width="50px">
+                    </div>
+                </div>
+
+                <script>
+                    // Dit zorgt er voor dat het filteren werkt :D
+                    function filterSelection(category){
+                        var items = document.getElementsByClassName("gallery-item");
+                        if (category === "all"){
+                            category = "";
+                        }
+                        for (var i = 0; i < items.length; i++){
+                            items[i].style.display = "none";
+                            if (items[i].className.indexOf(category) > -1){
+                                items[i].style.display = "block";
+                            }
+                        }
                     }
-                }
-            }
+                    // toont standaard alle items
+                    filterSelection('all');
+                </script>
+            </div>
+        </main>
 
-            // toont standaard alle items
-            filterSelection('all');
-        </script>
-    </main>
-
-    <footer>
-        <p>&copy; <script>document.write(new Date().getFullYear());</script> design.bylotus. All rights reserved.</p>
-    </footer>
-</body>
+        <footer>
+            <div class="wrapper">
+                <p>&copy; <script>document.write(new Date().getFullYear());</script> design.bylotus. All rights reserved.</p>
+            </div>
+        </footer>
+    </body>
 </html>
