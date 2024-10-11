@@ -44,7 +44,7 @@ nav a {
     height: 3px;
     background-color: pink;
     margin: 4px 0;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease;  
 }
 
 
@@ -78,4 +78,20 @@ body.menu-open {
     right: 10px;
     font-size: 40px;
     font-weight: bold;
+}
+
+/* grid */
+
+.gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.gallery-item {
+    margin: 15px;
+}
+
+.gallery-img {
+    width: 100%;
 }

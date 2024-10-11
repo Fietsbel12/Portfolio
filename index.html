@@ -3,20 +3,44 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
     <title>Lotus Koning</title>
 </head>
 <body>
     <header>
-        <div class="wrapper">          
+        <div class="wrapper">
+            <!--Hamburger menu-->
+            <div class="nav-menu" onclick="toggleMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
             <nav>
+                <span class="close-menu" onclick="toggleMenu()">×</span>
                 <a href="index.html">Me</a>
                 <a href="personalp.html">Personal projects</a>
                 <a href="schoolp.html">School projects</a>
                 <a href="contact.html">contact</a>
             </nav>
         </div>
+        <script>
+            function toggleMenu(){
+                var nav = document.querySelector("nav");
+                var menuIcon = document.querySelector(".nav-menu");
+                nav.classList.toggle("show");
+                menuIcon.classList.toggle("change");
+            }
+        </script>
     </header>
-    <main></main>
+
+    <main>
+        <div class="wrapper">
+            <img src="https://i.pinimg.com/564x/23/fa/d9/23fad9746fdc622c94c0ba5d43d3a8a9.jpg" alt="placeholder" width="200px">
+            <img src="https://i.pinimg.com/736x/c7/f0/f8/c7f0f82e014a3bef0c75f50da247b888.jpg" alt="placeholder" width="200px">
+            <img src="https://i.pinimg.com/736x/79/73/bb/7973bb5d4d579492e5d402baa2c74226.jpg" alt="placeholder" width="200px">
+        </div>
+    </main>
     <footer>
         <p>&copy; <script>document.write(new Date().getFullYear());</script> design.bylotus. All rights reserved.</p>
     </footer>
