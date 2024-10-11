@@ -1,55 +1,81 @@
-*{
+* {
     margin: 0;
     padding: 0;
 }
 
-/* nav */
-nav {
-    overflow: hidden;
-    max-height: 0;
-    transition: max-height 0.3s ease-in-out;
-    background-color: #333;
-    width: fit-content;
+.wrapper {
+    width: 75%;
+    margin: 0 auto;
 }
+
+
+nav {
+    position: fixed;
+    left: -250px; /* Verberg het menu buiten beeld aan de linkerkant */
+    top: 0;
+    width: 250px; 
+    height: auto;
+    background-color: pink;
+    transition: left 0.3s ease-in-out; /* Smooth like butter,  like a criminal undercover*/
+    z-index: 1000; 
+}
+
 
 nav a {
     display: block;
     color: white;
     text-decoration: none;
-    padding: 10px 20px;
+    padding: 15px 20px;
+    text-align: left;
 }
 
-/* Styling voor het hamburger menu*/
+/* Styling voor het hamburger menu */
 .nav-menu {
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
     margin-bottom: 10px;
+    z-index: 1100; 
 }
 
 .nav-menu div {
     width: 30px;
     height: 3px;
-    background-color: black;
+    background-color: pink;
     margin: 4px 0;
     transition: all 0.3s ease;
 }
 
-/* Geanimeerd kruisje wanneer het menu opent */
+
 .change .bar1 {
     transform: rotate(-45deg) translate(-5px, 6px);
 }
+
 .change .bar2 {
     opacity: 0;
 }
+
 .change .bar3 {
     transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* Het menu tonen als de klasse 'show' is toegevoegd */
+
 .show {
-    max-height: 500px; 
+    left: 0; 
 }
 
 
+body.menu-open {
+    padding-left: 250px; 
+    transition: padding-left 0.3s ease-in-out;
+}
+
+.close-menu {
+    cursor: pointer;
+    color: white;
+    position: absolute;
+    right: 10px;
+    font-size: 40px;
+    font-weight: bold;
+}

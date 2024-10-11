@@ -18,6 +18,7 @@
                 </div>
 
                 <nav>
+                    <span class="close-menu" onclick="toggleMenu()">×</span>
                     <a href="index.html">Me</a>
                     <a href="personalp.html">Personal projects</a>
                     <a href="schoolp.html">School projects</a>
@@ -27,7 +28,9 @@
             <script>
                 function toggleMenu(){
                     var nav = document.querySelector("nav");
+                    var menuIcon = document.querySelector(".nav-menu");
                     nav.classList.toggle("show");
+                    menuIcon.classList.toggle("change");
                 }
             </script>
         </header>
@@ -44,8 +47,11 @@
                     <button onclick="filterSelection('handcrafted')">Handcrafted</button>
                 </div>
                 <!--Weergaven van mijn persoonlijke projecten-->
-                <div class="gallery"> <!--hoofd class in deze class komt voor elke filter een aparte class-->
+                <div class="gallery"> <!--hoofd class in deze class komt voor elke filter een aparte class!!!!!!!!!!!!!!!-->
                     <!--Logo's-->
+                    <div class="gallery-item logo">
+                        <img src="img/placeholder.jpg" alt="placeholder" width="50px">
+                    </div>
                     <div class="gallery-item logo">
                         <img src="img/placeholder.jpg" alt="placeholder" width="50px">
                     </div>
@@ -57,7 +63,16 @@
                     <div class="gallery-item product">
                         <img src="img/placeholder3.jpg" alt="placeholder" width="50px">
                     </div>
+                    <div class="gallery-item product">
+                        <img src="img/placeholder3.jpg" alt="placeholder" width="50px">
+                    </div>
                     <!--Illustraties-->
+                    <div class="gallery-item illustrations">
+                        <img src="img/placeholder4.jpg" alt="placeholder" width="50px">
+                    </div>
+                    <div class="gallery-item illustrations">
+                        <img src="img/placeholder4.jpg" alt="placeholder" width="50px">
+                    </div>
                     <div class="gallery-item illustrations">
                         <img src="img/placeholder4.jpg" alt="placeholder" width="50px">
                     </div>
