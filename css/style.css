@@ -27,21 +27,28 @@ nav a {
     text-decoration: none;
     padding: 15px 20px;
     text-align: left;
+    font-size: 20px;
+}
+
+nav a:hover{
+    text-decoration: line-through;
 }
 
 /* Styling voor het hamburger menu */
+
 .nav-menu {
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: 20px;
     margin-bottom: 10px;
     z-index: 1100; 
 }
 
 .nav-menu div {
     width: 30px;
-    height: 3px;
+    height: 4px;
     background-color: pink;
     margin: 4px 0;
     transition: all 0.3s ease;  
@@ -80,11 +87,11 @@ body.menu-open {
     font-weight: bold;
 }
 
-/* grid */
+/*  */
 
 .gallery {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     flex-wrap: wrap;
 }
 
@@ -95,3 +102,34 @@ body.menu-open {
 .gallery-img {
     width: 100%;
 }
+
+/* Buttons */
+
+.filter-buttons{
+    text-align: center;
+}
+
+.filter-buttons button {
+    background: none;
+    border: none;
+    color: pink;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: bold;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-align: center;
+}
+
+.filter-buttons button:hover {
+    color: palevioletred;
+}
+
+footer{
+    text-align: center;
+}
+
+
+
+
+
