@@ -18,7 +18,7 @@ nav {
     left: -250px; /* Verberg het menu buiten beeld aan de linkerkant */
     top: 0;
     width: 250px; 
-    height: auto;
+    height: 1000px;
     background-color: #43b3ae;
     transition: left 0.3s ease-in-out; /* Smooth like butter,  like a criminal undercover*/
     z-index: 1000; 
@@ -29,9 +29,12 @@ nav a {
     display: block;
     color: #f5f5dc;
     text-decoration: none;
+    margin-top: 25px;
+    margin-bottom: 15px;
     padding: 15px 20px;
     text-align: left;
-    font-size: 20px;
+    font-size: 22px;
+    font-weight: bold;
 }
 
 nav a:hover{
@@ -87,8 +90,16 @@ body.menu-open {
     color: #f5f5dc;
     position: absolute;
     right: 10px;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: bold;
+}
+
+.menu-image {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 50%;
 }
 
 /*  */
@@ -132,6 +143,18 @@ body.menu-open {
 
 /* Index :3 */
 
+.photo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.photo-container img{
+    width: 150px;
+    height: auto;
+    margin-bottom: -45px;
+}
+
 .h1-title h1{
     text-transform: uppercase;
     text-align: center;
@@ -158,6 +181,17 @@ body.menu-open {
     font-size: 8vw;
     top: 20%;
     left: 10%;
+    position: relative;
+}
+
+.word1::before {
+    content: '';
+    position: absolute;
+    width: 79vw; 
+    height: 5px; 
+    background-color: #43b3ae; 
+    left: 0; 
+    top: -20px; 
 }
 
 .word2 {
@@ -172,9 +206,30 @@ body.menu-open {
     right: 10%;
 }
 
+.word3::after {
+    content: '';
+    position: absolute;
+    width: 53vw;
+    height: 5px; 
+    background-color: #43b3ae; 
+    left: 0;
+    bottom: -10px;
+}
+
+.bio{
+    top: 20%;
+    left: 10%;
+    position: relative;
+    color: #43b3ae;
+    margin-top: 20px;
+    margin-bottom: 35px;
+    font-family: roboto;
+}
+
 footer{
     text-align: center;
     color: #43b3ae;
+    margin-bottom: 15px;
 }
 
 
