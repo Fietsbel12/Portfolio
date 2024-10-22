@@ -8,33 +8,46 @@
     margin: 0 auto;
 }
 
-body{
-    background-color: #f5f5dc;
+#body-index{
+    background-color: black;
 }
 
+body{
+    background-color: #e6e1c5;
+}
 
 nav {
     position: fixed;
-    left: -250px; /* Verberg het menu buiten beeld aan de linkerkant */
+    left: -250px;
     top: 0;
-    width: 250px; 
-    height: 1000px;
-    background-color: #43b3ae;
-    transition: left 0.3s ease-in-out; /* Smooth like butter,  like a criminal undercover*/
-    z-index: 1000; 
+    width: 250px;
+    height: 100vh;
+    background-color:#43b3ae;
+    /* background-color: rgba(67, 179, 174, 0.8); */
+    /* backdrop-filter: blur(5px); */
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
 }
 
+nav a:first-of-type{
+    padding-top: 100px;
+}
 
 nav a {
     display: block;
     color: #f5f5dc;
     text-decoration: none;
-    margin-top: 25px;
-    margin-bottom: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
     padding: 15px 20px;
     text-align: left;
     font-size: 22px;
     font-weight: bold;
+    font-family: roboto;
+}
+
+a i {
+    vertical-align: middle;  /* Zorgt voor een nette uitlijning met de tekst */
 }
 
 nav a:hover{
@@ -43,11 +56,13 @@ nav a:hover{
 
 /* Styling voor het hamburger menu */
 
+
 .nav-menu {
     cursor: pointer;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 20px;
     margin-top: 20px;
     margin-bottom: 10px;
     z-index: 1100; 
@@ -98,8 +113,8 @@ body.menu-open {
     width: 200px;
     height: auto;
     display: block;
-    margin: 20px auto;
-    border-radius: 50%;
+    margin-left: 20px;
+    margin-top: 70px;
 }
 
 /*  */
@@ -128,6 +143,7 @@ body.menu-open {
     background: none;
     border: none;
     color: #43b3ae;
+    font-family: roboto;
     padding: 10px;
     font-size: 20px;
     font-weight: bold;
@@ -143,25 +159,26 @@ body.menu-open {
 
 /* Index :3 */
 
-.photo-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.photo-container img{
-    width: 150px;
-    height: auto;
-    margin-bottom: -45px;
+.background-container {
+    position: absolute;
+    inset: 0;
+    background: url('../img/lotus10sec.gif') center/contain; 
+    background-size: cover; 
+    background-repeat: no-repeat; 
+    filter: blur(10px);
+    z-index: -1;
 }
 
 .h1-title h1{
     text-transform: uppercase;
+    font-family: roboto;
     text-align: center;
     font-size: 55px;
     font-weight: bold;
     margin-bottom: 40px;
     color: #43b3ae;
+    /* background-color: #318e89; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); */
 }
 
 .text-container {
@@ -175,6 +192,7 @@ body.menu-open {
     font-weight: bold;
     text-transform: uppercase;
     color: #43b3ae;
+    /*text-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); */
 }
 
 .word1 {
@@ -221,15 +239,44 @@ body.menu-open {
     left: 10%;
     position: relative;
     color: #43b3ae;
-    margin-top: 20px;
+    margin-top: 100px;
     margin-bottom: 35px;
     font-family: roboto;
 }
 
-footer{
+a{
+    text-decoration: none;
+    color: #43b3ae;
+    font-family: roboto;
+}
+
+a:hover{
+    color: #318e89;
+}
+
+#footer-index{
+    position: relative;
+    bottom: 0;
+    left: 0;
+    width: 100%;
     text-align: center;
     color: #43b3ae;
-    margin-bottom: 15px;
+    font-family: roboto;
+    margin-bottom: 0;  /* Geen extra marges nodig omdat het vast is */
+    padding: 15px 0;
+}
+
+
+footer{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: #43b3ae;
+    font-family: roboto;
+    margin-bottom: 0;  /* Geen extra marges nodig omdat het vast is */
+    padding: 15px 0;
 }
 
 

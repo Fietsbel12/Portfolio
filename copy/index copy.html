@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <title>Lotus Koning</title>
+</head>
+<body>
+    <header>
+        <div class="wrapper">
+            <!--Hamburger menu-->
+            <div class="nav-menu" onclick="toggleMenu()">
+                <div class="bar1"></div>
+                <div class="bar2"></div>
+                <div class="bar3"></div>
+            </div>
+
+            <nav>
+                <span class="close-menu" onclick="toggleMenu()">×</span>
+                <a href="index.html">Me</a>
+                <a href="personalp.html">Personal projects</a>
+                <a href="schoolp.html">School projects</a>
+                <a href="contact.html">Contact</a>
+                <img src="img/logo2.gif" alt="Logo test" class="menu-image">
+            </nav>
+        </div>
+        <script>
+            function toggleMenu(){
+                var nav = document.querySelector("nav");
+                var menuIcon = document.querySelector(".nav-menu");
+                nav.classList.toggle("show");
+                menuIcon.classList.toggle("change");
+            }
+        </script>
+    </header>
+
+    <main>
+        <div class="wrapper">
+           <!--<div class="photo-container"> 
+                <img src="img/logo.gif" alt="test test test">
+            </div> -->
+            <div class="text-container">
+                <h1 class="word1">Portfolio</h1>
+                <h2 class="word2">Of</h2>
+                <h1 class="word3">Lotus</h1>
+            </div>
+            <div class="bio">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                <p>Laborum beatae assumenda iure, tempora excepturi alias? </p>
+                <p>Sint laboriosam vitae accusantium odit pariatur iste perspiciatis?</p>
+                <p>Suscipit libero fuga dolor similique sint nostrum.</p>
+                <a href="contact.html">Neem contact op</a>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="wrapper">
+            <p>&copy; <script>document.write(new Date().getFullYear());</script> design.bylotus. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
