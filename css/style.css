@@ -240,21 +240,6 @@ body.menu-open {
     }
 }
 
-/* Achtergrond voor de project pages*/
-/*.background-container {
-    position: fixed;              
-    top: 0;                       
-    left: 0;                      
-    width: 100vw;                
-    height: 100vh;                
-    background: url('../img/logo_website2.png') no-repeat; 
-    background-size: auto;        
-    background-repeat: repeat;    
-    z-index: -1;                  
-    filter: blur(10px);           
-}*/
-
-
 .h1-title h1{
     text-transform: uppercase;
     font-family: roboto;
