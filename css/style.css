@@ -56,7 +56,6 @@ nav a:hover{
 
 /* Styling voor het hamburger menu */
 
-
 .nav-menu {
     cursor: pointer;
     display: flex;
@@ -75,7 +74,6 @@ nav a:hover{
     margin: 4px 0;
     transition: all 0.3s ease;  
 }
-
 
 .change .bar1 {
     transform: rotate(-45deg) translate(-5px, 6px);
@@ -117,7 +115,7 @@ body.menu-open {
     margin-top: 70px;
 }
 
-/*  */
+/*styling voor de gallery items*/
 
 .gallery {
     display: flex;                     
@@ -186,7 +184,7 @@ body.menu-open {
     color: #ff8fb4;
 }
 
-/* Index+:3 */
+/* Index + projects*/
 
 .icon-container {
     display: flex;
@@ -201,6 +199,7 @@ body.menu-open {
     color: #ef2832;
 }
 
+/*background index */
 .background-container-index {
     position: fixed;
     top: 0;
@@ -215,14 +214,14 @@ body.menu-open {
 .content {
     position: relative;
     z-index: 1;
-    padding-top: 50px; /* Gebruik padding in plaats van margin */
+    padding-top: 50px;
     background-color: black;
     color: #f28f3b;
     font-family: Roboto, sans-serif;
     padding: 30px;
 }
 
-/* Scroll-effect op tekst */
+/* Effect op tekst index */
 .text-container h1, .text-container h2 {
     position: relative;
     font-weight: bold;
@@ -257,7 +256,7 @@ body.menu-open {
     height: 70vh; 
 }
 
-/* Index */
+/* Index-portfolio of Lotus */
 
 .text-container h1, .text-container h2 {
     position: absolute;
@@ -309,22 +308,126 @@ body.menu-open {
 /* .bio styling ;D */
 .bio {
     color: #fcf5e5;
-    font-family: Roboto, sans-serif;
+    font-family: Roboto, sans-serif;    
+}
+
+.bio h2, .bio p{
+    text-align: left;
+    margin: 0;
+}
+
+.bio h2{
+    padding-bottom: 5px;
+    margin: 15px 0px 10px 0px;
+    padding: 0px 0px 40px 0px ;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.bio p{
+    padding-bottom: 5px;
+    margin: 15px 0px 10px 0px;
+    font-size: 28px;  
+}
+
+.bio-content {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
     margin-top: 20px;
+    width: 100%;
 }
 
-.bio p {
-    margin-bottom: 15px;
+.bio-text {
+    position: relative;
+    left: 100px;
+    max-width: 500px;
 }
 
-.bio a {
+.bio-img {
+    text-align: center;
+    width: 40%;
+}
+
+.bio-img img {
+    width: 650px;
+    transform: rotate(-5deg);
+    height: auto;
+    position: relative;
+    right: 170px;
+    bottom: 90px;
+}
+
+.moving-text {
+    font-family: "Permanent Marker", cursive;
+    font-size: 45px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #ff8fb4;
+    display: inline-block;
+    transform-origin: center; 
+    animation: tilt 1s infinite alternate ease-in-out;
+    position: relative; /* hier mee kan ik de tekst verhuizen */
+    right: 100px;
+    bottom: 160px;
+}
+
+@keyframes tilt {
+    from {
+        transform: rotate(-15deg);
+    }
+    to {
+        transform: rotate(15deg);
+    }
+}
+
+.index-button{
+    display: flex;
+    justify-content: right;
+    text-align: center;
+    position: relative;
+    right: 100px;
+    bottom: 100px;
+}
+
+.index-button a {
     text-decoration: none;
-    color: #fcf5e5;
+    font-family: roboto;
+    font-size: 20px;
+    color: #a3d5ff;
+    padding: 10px 20px;
+    background-color:#ef2832;
+    border: none;
+    cursor: pointer;
+    box-shadow: 3px 3px 0px 0px #ff8fb4;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    bottom: 250px;
 }
 
-.bio a:hover {
-    color: #a3d5ff;
+.index-button a:hover {
+    text-decoration: line-through;
+    color: #ff8fb4;
 }
+
+/*about me */
+.about-me-container {
+    width: 40%;
+    margin: 0 auto;
+}
+
+.about-me-container img {
+    display: block;
+    margin: 0 auto; 
+    width: 100%;
+    height: auto;
+}
+
+/* footer */
 
 #footer-index{
     position: relative;
