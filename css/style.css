@@ -14,7 +14,22 @@
 }
 
 body{
+    cursor: none;
     background-color: #fcf5e5;
+}
+
+/* cursor*/
+
+#cursor {
+    position: absolute;
+    width: 40px; 
+    height: 40px;
+    background-image: url('img/catpaw.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none; 
+    transform: translate(-50%, -50%);
+    z-index: 1000; 
 }
 
 nav {
@@ -464,6 +479,20 @@ footer{
     font-family: roboto;
     margin-bottom: 0;  
     padding: 15px 0;
+}
+
+/* cursor*/
+
+#cursor {
+    position: absolute;
+    width: 40px; 
+    height: 40px;
+    background-image: url('img/catpaw.png'); 
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none; 
+    transform: translate(-50%, -50%);
+    z-index: 1000; 
 }
 
 
