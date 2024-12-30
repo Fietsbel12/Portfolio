@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="css/style.css" type="text/css">
+        <link rel="stylesheet" href="css/modal.css" type="text/css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
         <title>Lotus Koning</title>
     </head>
@@ -56,12 +57,15 @@
                 <div class="gallery"> <!--hoofd class in deze class komt voor elke filter een aparte class!!!!!!!!!!!!!!!-->
                     <!--Logo's-->
                     <div class="gallery-item logo">
-                        <img src="personal-projects/img/logo/logo.png" alt="Logo">
+                        <img src="personal-projects/img/designbylotus.png" alt="Logo" onclick="openModal(this)">
+                    </div>
+                    <div class="gallery-item logo">
+                        <img src="personal-projects/img/logo/logo.png" alt="Logo" onclick="openModal(this)">
                     </div>
 
                     <!--Print werk-->
                     <div class="gallery-item print">
-                        <img src="personal-projects/img/s10_poster6.png" alt="S10 Poster">
+                        <img src="personal-projects/img/s10_poster6.png" alt="S10 Poster" onclick="openModal(this)">
                     </div>
 
                     <!--Product design-->
@@ -70,13 +74,16 @@
 
                     <!--Illustraties-->
                     <div class="gallery-item illustrations">
-                        <img src="personal-projects/img/Billie_cartoon1_aangepast.png" alt="Billie Eilish illustration">
+                        <img src="personal-projects/img/Billie_cartoon1_aangepast.png" alt="Billie Eilish illustration" onclick="openModal(this)">
                     </div>
                     <div class="gallery-item illustrations">
-                        <img src="personal-projects/img/IMG_2811.JPG" alt="Lion illustration">
+                        <img src="personal-projects/img/IMG_2811.JPG" alt="Lion illustration" onclick="openModal(this)">
                     </div>
                     <div class="gallery-item illustrations">
-                        <img src="personal-projects/img/kat.jpg" alt="cat illustration">
+                        <img src="personal-projects/img/kat.jpg" alt="cat illustration" onclick="openModal(this)">
+                    </div>
+                    <div class="gallery-item illustrations">
+                        <img src="personal-projects/img/ijsvogel.png" alt="kingfisher illustration" onclick="openModal(this)">
                     </div>
                     
                     <!--gifjes/vids?!-->
@@ -88,19 +95,36 @@
                     
                     <!--Handgemaakt werk-->
                     <div class="gallery-item custom">
-                        <img src="personal-projects/img/emoties/drowning_in_emotions.jpg" alt="Watercolor drawing">     
+                        <img src="personal-projects/img/emoties/drowning_in_emotions.jpg" alt="Watercolor drawing" onclick="openModal(this)">     
                     </div>
                     <div class="gallery-item custom">
-                        <img src="personal-projects/img/s10/s10.png" alt="S10 Drawing">  
+                        <img src="personal-projects/img/s10/s10.png" alt="S10 Drawing" onclick="openModal(this)">  
                     </div>
                     <div class="gallery-item custom">
-                        <img src="personal-projects/img/dotart1.jpg" alt="Dot art drawing">    
+                        <img src="personal-projects/img/dotart1.jpg" alt="Dot art drawing" onclick="openModal(this)">    
                     </div>
                     <div class="gallery-item custom">
-                        <img src="personal-projects/img/verf1.jpg" alt="Painting">   
+                        <img src="personal-projects/img/verf1.jpg" alt="Painting" onclick="openModal(this)">   
+                    </div>
+                    <div class="gallery-item custom">
+                        <img src="personal-projects/img/macmiller.png" alt="Dot art" onclick="openModal(this)">   
+                    </div>
+                    <div class="gallery-item custom">
+                        <img src="personal-projects/img/s10pink.png" alt="Sketch" onclick="openModal(this)">   
+                    </div>
+                    <div class="gallery-item custom">
+                        <img src="personal-projects/img/fallen.png" alt="Dot art" onclick="openModal(this)">   
                     </div>
                 </div>
 
+                <!--Modal-->
+                <div id="modal" class="modal">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <img class="modal-content" id="modalImage">
+                    <div id="caption"></div>
+                </div>
+
+                <!--Filter script-->
                 <script>
                     // Dit zorgt er voor dat het filteren werkt :D
                     function filterSelection(category){
@@ -117,6 +141,24 @@
                     }
                     // toont standaard alle items
                     filterSelection('all');
+
+                    // modal
+                    function openModal(image) {
+                        const modal = document.getElementById("modal");
+                        const modalImage = document.getElementById("modalImage");
+                        const caption = document.getElementById("caption");
+
+                        modal.style.display = "block";
+
+                        modalImage = image.src;
+                        caption.textContent = image.alt;
+                    }
+
+                    function closeModal(){
+                        const modal = document.getElementById("modal");
+
+                        modal.style.display = "none";
+                    }
                 </script>
             </div>
         </main>
