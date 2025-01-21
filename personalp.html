@@ -62,15 +62,26 @@
                             alt="Logo" 
                             data-title="design by Lotus"
                             data-description="ewaaaaaaaaaa"
+                            data-image="personal-projects/img/cutout.png"
                             onclick="openModal(this)">
                     </div>
                     <div class="gallery-item logo">
-                        <img src="personal-projects/img/logo/logo.png" alt="Logo" onclick="openModal(this)">
+                        <img 
+                            src="personal-projects/img/logo/logo.png" 
+                            alt="Logo"
+                            data-title="logo"
+                            data-description="test"
+                            onclick="openModal(this)">
                     </div>
 
                     <!--Print werk-->
                     <div class="gallery-item print">
-                        <img src="personal-projects/img/s10_poster6.png" alt="S10 Poster" onclick="openModal(this)">
+                        <img 
+                        src="personal-projects/img/s10_poster6.png" 
+                        alt="S10 Poster"
+                        data-title="Poster"
+                        data-description="test"
+                        onclick="openModal(this)">
                     </div>
 
                     <!--Product design-->
@@ -79,16 +90,36 @@
 
                     <!--Illustraties-->
                     <div class="gallery-item illustrations">
-                        <img src="personal-projects/img/Billie_cartoon1_aangepast.png" alt="Billie Eilish illustration" onclick="openModal(this)">
+                        <img 
+                            src="personal-projects/img/Billie_cartoon1_aangepast.png" 
+                            alt="Billie Eilish illustration" 
+                            data-title="test"
+                            data-description="test"
+                            onclick="openModal(this)">
                     </div>
                     <div class="gallery-item illustrations">
-                        <img src="personal-projects/img/IMG_2811.JPG" alt="Lion illustration" onclick="openModal(this)">
+                        <img 
+                            src="personal-projects/img/IMG_2811.JPG" 
+                            alt="Lion illustration" 
+                            data-title="test"
+                            data-description="test"
+                            onclick="openModal(this)">
                     </div>
                     <div class="gallery-item illustrations">
-                        <img src="personal-projects/img/kat.jpg" alt="cat illustration" onclick="openModal(this)">
+                        <img 
+                            src="personal-projects/img/kat.jpg" 
+                            alt="cat illustration"
+                            data-title="test"
+                            data-description="test" 
+                            onclick="openModal(this)">
                     </div>
                     <div class="gallery-item illustrations">
-                        <img src="personal-projects/img/ijsvogel.png" alt="kingfisher illustration" onclick="openModal(this)">
+                        <img 
+                            src="personal-projects/img/ijsvogel.png" 
+                            alt="kingfisher illustration"
+                            data-title="test"
+                            data-description="test"
+                            onclick="openModal(this)">
                     </div>
                     
                     <!--gifjes/vids?!-->
@@ -100,25 +131,60 @@
                     
                     <!--Handgemaakt werk-->
                     <div class="gallery-item custom">
-                        <img src="personal-projects/img/emoties/drowning_in_emotions.jpg" alt="Watercolor drawing" onclick="openModal(this)">     
+                        <img 
+                            src="personal-projects/img/emoties/drowning_in_emotions.jpg" 
+                            alt="Watercolor drawing"
+                            data-title="test"
+                            data-description="test" 
+                            onclick="openModal(this)">     
                     </div>
                     <div class="gallery-item custom">
-                        <img src="personal-projects/img/s10/s10.png" alt="S10 Drawing" onclick="openModal(this)">  
+                        <img 
+                            src="personal-projects/img/s10/s10.png" 
+                            alt="S10 Drawing"
+                            data-title="test"
+                            data-description="test"
+                            onclick="openModal(this)">  
                     </div>
                     <div class="gallery-item custom">
-                        <img src="personal-projects/img/dotart1.jpg" alt="Dot art drawing" onclick="openModal(this)">    
+                        <img 
+                            src="personal-projects/img/dotart1.jpg" 
+                            alt="Dot art drawing"
+                            data-title="test"
+                            data-description="test" 
+                            onclick="openModal(this)">    
                     </div>
                     <div class="gallery-item custom">
-                        <img src="personal-projects/img/verf1.jpg" alt="Painting" onclick="openModal(this)">   
+                        <img 
+                            src="personal-projects/img/verf1.jpg" 
+                            alt="Painting" 
+                            data-title="test"
+                            data-description="test"
+                            onclick="openModal(this)">   
                     </div>
                     <div class="gallery-item custom">
-                        <img src="personal-projects/img/macmiller.png" alt="Dot art" onclick="openModal(this)">   
+                        <img 
+                            src="personal-projects/img/macmiller.png" 
+                            alt="Dot art"
+                            data-title="test"
+                            data-description="test" 
+                            onclick="openModal(this)">   
                     </div>
                     <div class="gallery-item custom">
-                        <img src="personal-projects/img/s10pink.png" alt="Sketch" onclick="openModal(this)">   
+                        <img 
+                            src="personal-projects/img/s10pink.png" 
+                            alt="Sketch" 
+                            data-title="test"
+                            data-description=""
+                            onclick="openModal(this)">   
                     </div>
                     <div class="gallery-item custom">
-                        <img src="personal-projects/img/fallen.png" alt="Dot art" onclick="openModal(this)">   
+                        <img 
+                            src="personal-projects/img/fallen.png" 
+                            alt="Dot art"
+                            data-title="test"
+                            data-description="test" 
+                            onclick="openModal(this)">   
                     </div>
                 </div>
 
@@ -130,6 +196,7 @@
                         <div class="modal-description">
                             <h2 id="modalTitle"></h2>
                             <p id="modalText"></p>
+                            <img id="extraImage">
                         </div>
                     </div>
                 </div>
@@ -158,16 +225,20 @@
                         const modalImage = document.getElementById("modalImage");
                         const modalTitle = document.getElementById("modalTitle");
                         const modalText = document.getElementById("modalText");
+                        const extraImaga = document.getElementById("extraImage");
+
 
                         // Haal data-attributen op
                         const title = image.getAttribute("data-title");
                         const description = image.getAttribute("data-description");
+                        const img = image.getAttribute("data-image");
 
                         // Vul de modal met data
                         modal.style.display = "block";
                         modalImage.src = image.src; // Stel de afbeelding in
                         modalTitle.textContent = title; // Stel de titel in
                         modalText.textContent = description; // Stel de beschrijving in
+                        extraImaga.src = img;
                     }
 
                     function closeModal() {
