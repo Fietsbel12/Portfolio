@@ -11,6 +11,7 @@
 #body-index{
     background-color: black;
     overflow-x: hidden;
+    min-height: 100vh;
 }
 
 body{
@@ -219,6 +220,7 @@ body.menu-open {
     color: #f28f3b;
     font-family: Roboto, sans-serif;
     padding: 30px;
+    min-height: 100vh;
 }
 
 /* Effect op tekst index */
@@ -305,30 +307,7 @@ body.menu-open {
     bottom: -10px;
 }
 
-/* .bio styling ;D */
-.bio {
-    color: #fcf5e5;
-    font-family: Roboto, sans-serif;    
-}
-
-.bio h2, .bio p{
-    text-align: left;
-    margin: 0;
-}
-
-.bio h2{
-    padding-bottom: 5px;
-    margin: 15px 0px 10px 0px;
-    padding: 0px 0px 40px 0px ;
-    font-size: 60px;
-    text-transform: uppercase;
-}
-
-.bio p{
-    padding-bottom: 5px;
-    margin: 15px 0px 10px 0px;
-    font-size: 28px;  
-}
+/* .bio styling index ;D */
 
 .bio-content {
     display: flex;
@@ -338,47 +317,43 @@ body.menu-open {
     width: 100%;
 }
 
-.bio-text {
-    position: relative;
-    left: 100px;
-    max-width: 500px;
-}
-
 .bio-img {
     text-align: center;
     width: 40%;
+    display: flex;
+    justify-content: center;
 }
 
 .bio-img img {
-    width: 650px;
-    transform: rotate(-5deg);
+    width: 1000px;
     height: auto;
+    align-content: center;
     position: relative;
     right: 170px;
-    bottom: 90px;
+    bottom: 60px;
+    top: 30px;
 }
 
 .moving-text {
-    font-family: "Permanent Marker", cursive;
+    font-family: "Permanent Marker", serif;
+    font-style: normal;
     font-size: 45px;
-    font-weight: bold;
+    font-weight: 400;
     text-transform: uppercase;
     color: #ff8fb4;
     display: inline-block;
     transform-origin: center; 
     animation: tilt 1s infinite alternate ease-in-out;
     position: relative; /* hier mee kan ik de tekst verhuizen */
-    right: 100px;
-    bottom: 160px;
+    right: 1400px;
+    top: 300px;
+    animation: tilt 3s infinite ease-in-out;
 }
 
 @keyframes tilt {
-    from {
-        transform: rotate(-15deg);
-    }
-    to {
-        transform: rotate(15deg);
-    }
+    0% { transform: rotate(-10deg) scale(1); }
+    50% { transform: rotate(10deg) scale(1.05); }
+    100% { transform: rotate(-10deg) scale(1); }
 }
 
 .index-button{
@@ -386,8 +361,8 @@ body.menu-open {
     justify-content: right;
     text-align: center;
     position: relative;
-    right: 100px;
-    bottom: 100px;
+    right: 200px;
+    top: 150px;
 }
 
 .index-button a {
