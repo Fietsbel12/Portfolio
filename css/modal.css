@@ -13,40 +13,47 @@
 .modal-content {
     margin: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
-    max-width: 80%;
-    max-height: 80%;
+    width: 80%;
+    height: auto;  
     background-color:#ef2832;
     padding: 20px;
     border-radius: 3px;
     box-shadow: 3px 3px 0px 0px #ff8fb4;
+    overflow: auto;
 }
 
 .modal img {                       
-    background-color: white;
+    max-width: 300px;
+    max-height: 60vh;
+    width: 50%;
+    object-fit: contain;
 }
 
 .modal-description {
-    text-align: center;
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
 }
 
 .modal-description h2 {
     margin: 0 0 10px;
     font-size: 1.5rem;
+    color: #a3d5ff;
 }
 
 .modal-description p {
     margin: 0 0 20px;
     font-size: 1rem;
-    color: #555;
+    color: #a3d5ff;
 }
 
 .close {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: #fff;
+    color: #ff8fb4;
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
