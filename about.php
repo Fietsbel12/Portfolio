@@ -19,11 +19,11 @@ DOCTYPE html>
             <div class="wrapper">
                 <nav>
                     <span class="close-menu" onclick="toggleMenu()">×</span>
-                    <a href="index.html">Home <i class="fa-solid fa-arrow-right"></i></a>
-                    <a href="about.html">About</a>
-                    <a href="personalp.html">Personal projects</a>
-                    <a href="schoolp.html">School projects</a>
-                    <a href="services.html">Services</a>
+                    <a href="index.php">Home <i class="fa-solid fa-arrow-right"></i></a>
+                    <a href="about.php">About</a>
+                    <a href="personalp.php">Personal projects</a>
+                    <a href="schoolp.php">School projects</a>
+                    <a href="services.php">Services</a>
                     <!--<img src="img/logo_website.png" alt="Logo test" class="menu-image">-->
                 </nav>
             </div>
@@ -49,9 +49,9 @@ DOCTYPE html>
             </div>
         </main>
         <footer id="footer-index">
-            <div class="wrapper">
-                <p>&copy; <script>document.write(new Date().getFullYear());</script> design.bylotus. All rights reserved.</p>
-            </div>
+            <?php 
+                require_once("php/footer.php");
+            ?>
         </footer>
     </body>
 </html>

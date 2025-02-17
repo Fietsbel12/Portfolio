@@ -7,11 +7,11 @@
 <div class="wrapper">
     <nav>
         <span class="close-menu" onclick="toggleMenu()">×</span>
-        <a href="index.html">Home <i class="fa-solid fa-arrow-right"></i></a>
-        <a href="about.html">About</a>
-        <a href="personalp.html">Personal projects</a>
-        <a href="schoolp.html">School projects</a>
-        <a href="services.html">Services</a>
+        <a href="index.php">Home <i class="fa-solid fa-arrow-right"></i></a>
+        <a href="about.php">About</a>
+        <a href="personalp.php">Personal projects</a>
+        <a href="schoolp.php">School projects</a>
+        <a href="services.php">Services</a>
         <!--<img src="img/logo_website.png" alt="Logo test" class="menu-image">-->
     </nav>
 </div>
