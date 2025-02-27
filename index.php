@@ -64,7 +64,7 @@
                             </div>
                     </div>
                     <div class="index-button">
-                        <a href="about.html">About Me</a>
+                        <a href="about.php">About Me</a>
                     </div>
                 </div>
             </div>
