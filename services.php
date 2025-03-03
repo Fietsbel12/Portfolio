@@ -10,31 +10,7 @@
 
 <body>
     <header>
-        <!--Hamburger menu-->
-        <div class="nav-menu" onclick="toggleMenu()">
-            <div class="bar1"></div>
-            <div class="bar2"></div>
-            <div class="bar3"></div>
-        </div>
-        <div class="wrapper">
-            <nav>
-                <span class="close-menu" onclick="toggleMenu()">×</span>
-                <a href="index.php">Home <i class="fa-solid fa-arrow-right"></i></a>
-                <a href="about.php">About</a>
-                <a href="personalp.php">Personal projects</a>
-                <a href="schoolp.php">School projects</a>
-                <a href="services.php">Services</a>
-                <!--<img src="img/logo_website.png" alt="Logo test" class="menu-image">-->
-            </nav>
-        </div>
-        <script>
-            function toggleMenu(){
-                var nav = document.querySelector("nav");
-                var menuIcon = document.querySelector(".nav-menu");
-                nav.classList.toggle("show");
-                menuIcon.classList.toggle("change");
-            }
-        </script>
+        <?php require_once 'php/header.php';?>
     </header>
 
     <main>
@@ -43,9 +19,7 @@
         </div>
     </main>
     <footer>
-        <?php 
-            require_once("php/footer.php");
-        ?>
+        <?php require_once("php/footer.php");?>
     </footer>
 </body>
 </html>
