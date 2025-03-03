@@ -21,11 +21,4 @@
     <a href="https://www.linkedin.com/in/lotus-k-445394171/" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
     <a href="https://www.behance.net/lotuskoning" class="icon"><i class="fa-brands fa-behance"></i></a>
 </div>
-<script>
-    function toggleMenu(){
-        var nav = document.querySelector("nav");
-        var menuIcon = document.querySelector(".nav-menu");
-        nav.classList.toggle("show");
-        menuIcon.classList.toggle("change");
-    }
-</script>
+<script src="js/toggle.js"></script>

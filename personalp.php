@@ -39,8 +39,7 @@
                             src="personal-projects/img/designbylotus.png" 
                             alt="Logo" 
                             data-title="design by Lotus"
-                            data-description="ewaaaaaaaaaa"
-                            data-image="personal-projects/img/cutout.png"
+                            data-description="Logo made for my own company deisgn by lotus"
                             onclick="openModal(this)">
                     </div>
                     <div class="gallery-item logo">
@@ -49,6 +48,7 @@
                             alt="Logo"
                             data-title="logo"
                             data-description="test"
+                            data-image=""
                             onclick="openModal(this)">
                     </div>
 
@@ -59,6 +59,7 @@
                         alt="S10 Poster"
                         data-title="Poster"
                         data-description="test"
+                        data-image=""
                         onclick="openModal(this)">
                     </div>
 
@@ -73,6 +74,7 @@
                             alt="Billie Eilish illustration" 
                             data-title="test"
                             data-description="test"
+                            data-image=""
                             onclick="openModal(this)">
                     </div>
                     <div class="gallery-item illustrations">
@@ -81,6 +83,7 @@
                             alt="Lion illustration" 
                             data-title="test"
                             data-description="test"
+                            data-image=""
                             onclick="openModal(this)">
                     </div>
                     <div class="gallery-item illustrations">
@@ -88,7 +91,8 @@
                             src="personal-projects/img/kat.jpg" 
                             alt="cat illustration"
                             data-title="test"
-                            data-description="test" 
+                            data-description="test"
+                            data-image="" 
                             onclick="openModal(this)">
                     </div>
                     <div class="gallery-item illustrations">
@@ -97,6 +101,7 @@
                             alt="kingfisher illustration"
                             data-title="test"
                             data-description="test"
+                            data-image=""
                             onclick="openModal(this)">
                     </div>
                     
@@ -114,6 +119,7 @@
                             alt="Watercolor drawing"
                             data-title="test"
                             data-description="test" 
+                            data-image=""
                             onclick="openModal(this)">     
                     </div>
                     <div class="gallery-item custom">
@@ -122,6 +128,7 @@
                             alt="S10 Drawing"
                             data-title="test"
                             data-description="test"
+                            data-image=""
                             onclick="openModal(this)">  
                     </div>
                     <div class="gallery-item custom">
@@ -130,6 +137,7 @@
                             alt="Dot art drawing"
                             data-title="test"
                             data-description="test" 
+                            data-image=""
                             onclick="openModal(this)">    
                     </div>
                     <div class="gallery-item custom">
@@ -138,6 +146,7 @@
                             alt="Painting" 
                             data-title="test"
                             data-description="test"
+                            data-image=""
                             onclick="openModal(this)">   
                     </div>
                     <div class="gallery-item custom">
@@ -146,6 +155,7 @@
                             alt="Dot art"
                             data-title="test"
                             data-description="test" 
+                            data-image=""
                             onclick="openModal(this)">   
                     </div>
                     <div class="gallery-item custom">
@@ -154,6 +164,7 @@
                             alt="Sketch" 
                             data-title="test"
                             data-description=""
+                            data-image=""
                             onclick="openModal(this)">   
                     </div>
                     <div class="gallery-item custom">
@@ -162,6 +173,7 @@
                             alt="Dot art"
                             data-title="test"
                             data-description="test" 
+                            data-image=""
                             onclick="openModal(this)">   
                     </div>
                 </div>
@@ -178,52 +190,10 @@
                         </div>
                     </div>
                 </div>
-
-                <!--Filter script-->
-                <script>
-                    // Dit zorgt er voor dat het filteren werkt :D
-                    function filterSelection(category){
-                        var items = document.getElementsByClassName("gallery-item");
-                        if (category === "all"){
-                            category = "";
-                        }
-                        for (var i = 0; i < items.length; i++){
-                            items[i].style.display = "none";
-                            if (items[i].className.indexOf(category) > -1){
-                                items[i].style.display = "block";
-                            }
-                        }
-                    }
-                    // toont standaard alle items
-                    filterSelection('all');
-
-                    // modal
-                    function openModal(image) {
-                        const modal = document.getElementById("modal");
-                        const modalImage = document.getElementById("modalImage");
-                        const modalTitle = document.getElementById("modalTitle");
-                        const modalText = document.getElementById("modalText");
-                        const extraImaga = document.getElementById("extraImage");
-
-
-                        // Haal data-attributen op
-                        const title = image.getAttribute("data-title");
-                        const description = image.getAttribute("data-description");
-                        const img = image.getAttribute("data-image");
-
-                        // Vul de modal met data
-                        modal.style.display = "block";
-                        modalImage.src = image.src; // Stel de afbeelding in
-                        modalTitle.textContent = title; // Stel de titel in
-                        modalText.textContent = description; // Stel de beschrijving in
-                        extraImaga.src = img;
-                    }
-
-                    function closeModal() {
-                        const modal = document.getElementById("modal");
-                        modal.style.display = "none"; // Sluit de modal
-                    }
-                </script>
+                <!--Haalt het filter script op-->
+                <script src="js/filter.js"></script>
+                <!--Haalt het modal script op-->
+                <script src="js/modal.js"></script>
             </div>
         </main>
 
